@@ -4,3 +4,5 @@ env
 __pychache__
 biographs/__pychache__
 biographs/lib/__pychache__
+results/*
+data/*
