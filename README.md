@@ -10,6 +10,18 @@ Python 3.x is required and [jupyter](https://jupyter.org/) is needed to run the 
 ```
 pip install -r requirements.txt
 ```
+You need to have LaTex installed on your system in order to produce the plots with Matplotlib. On Ubuntu, you can install LaTex and the necessary extensions by running
+
+```
+sudo apt-get install dvipng texlive-latex-base texlive-latex-extra texlive-fonts-recommended
+```
+and if you still get an error, try installing `cm-super`:
+```
+sudo apt-get install cm-super
+```
+
+For other operating systems, or if you encounter problems, please follow the instructions in Matplotlib's [tutorial](https://matplotlib.org/3.1.0/tutorials/text/usetex.html).
+
 
 ## Author
 
