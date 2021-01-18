@@ -1,7 +1,7 @@
 # Partitioning of atomic contacts in a protein variants
 
 Data and code for the comparison the local partitioning of atomic contacts in the Amino Acid Networks of protein variants. The presented method and results are described in:
-- L. Pacini and C. Lesieur, "A simple tool to diagnose sequence-variant dynamic perturbations by comparing atomic protein structures.", Submitted to Bioinformatics in January 2021.
+- L. Pacini and C. Lesieur, "A computational methodology to diagnose sequence-variant dynamic perturbations by comparing atomic protein structures", Submitted to Bioinformatics in January 2021.
 
 ## Requirements
 
