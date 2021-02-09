@@ -30,4 +30,9 @@ Lorenza Pacini - [lorpac](https://github.com/lorpac)
 ## How to cite
 
 If you use this code in your work, please cite:
-- L. Pacini and C. Lesieur, "A simple tool to diagnose sequence-variant dynamic perturbations by comparing atomic protein structures.", Submitted to PNAS on November 2020.
+- L. Pacini and C. Lesieur, "A simple tool to diagnose sequence-variant dynamic perturbations by comparing atomic protein structures.", Submitted to Bioinformatics in January 2021.
+  
+## Licence
+
+The Building network source code is available under the [CeCILL](http://cecill.info/) licence. Please see `LICENCE.txt` for details.
+
