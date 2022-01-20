@@ -4,6 +4,8 @@ import networkx as nx
 import os
 import matplotlib.pyplot as plt
 from matplotlib import rc
+import pandas as pd
+
 plt.rcParams.update({'font.size': 20})
 rc('text', usetex=True)
 
@@ -41,10 +43,11 @@ def local_partitioning_difference(variant1, variant2):
 
     return {node: np.array(lp2[node]) - np.array(lp1[node]) for node in lp1.keys()}
 
-def plot_local_partitioning_difference(variant1, variant2, folder_path, name=None, figsize=(20, 5)):
+def plot_local_partitioning_difference(variant1, variant2, folder_path, name=None, figsize=(20, 5), save_csv=False):
     chains = variant1.chains
 
-    if len(chains) > 0:
+    oligomer=False
+    if len(chains) > 1:
         oligomer = True
     diff = local_partitioning_difference(variant1, variant2)
 
@@ -81,9 +84,22 @@ def plot_local_partitioning_difference(variant1, variant2, folder_path, name=Non
         plt.grid()
         if name:
             plt.savefig(os.path.join(folder_path, "%s_plot_differences_chain%s.png" %(name, c)))
+            plt.savefig(os.path.join(folder_path, "%s_plot_differences_chain%s.pdf" %(name, c)))
         else:
             plt.savefig(os.path.join(folder_path, "plot_differences_chain%s.png" %c))
+            plt.savefig(os.path.join(folder_path, "plot_differences_chain%s.pdf" %c))
         plt.show()
+
+        if save_csv:
+            df = pd.DataFrame()
+            df["position"] = positions
+            df["label"]= xticks
+            df["diff1D"] = diff1D
+            df["diff2D"] = diff2D
+            df["diff3D"] = diff3D
+            if oligomer:
+                df["diff4D"] = diff4D
+            df.to_csv(os.path.join(folder_path, "differences_chain%s.csv" %c), index=False)
 
 
 
