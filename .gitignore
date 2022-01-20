@@ -1,7 +1,7 @@
 env
 .ipynb_checkpoints
 .vscode
-__pychache__
+__pycache__
 biographs/__pychache__
 biographs/lib/__pychache__
 results/*
